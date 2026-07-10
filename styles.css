@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey-light: #D3D3D3;
+    --ice-white: #DDD9CE;
+    --eucalyptus: #54a087;
+    --white: #fff;
+    --hover-btn: #41836D;
+    --graphite-gray: #36454F;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--grey-light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--ice-white);
+    max-width: 50rem;
+    width: 100%;
+    padding: 3rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.productNameLabel {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    color: var(--graphite-gray);
+}
+
+#productNameInput {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+}
+
+.btn-cellPhone {
+    background-color: var(--eucalyptus);
+    border: none;
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: bold;
+    padding: 1.2rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.btn-cellPhone:hover {
+    background-color: var(--hover-btn);
+}
