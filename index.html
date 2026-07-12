@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Controle de Estoque</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="main.js" defer></script>
-    </head>
-    <body>
-        <main>
-            <h1 class="h1TitleMain">Controle de Estoque</h1>
-            <div class="labelInputProductNameDiv">
-                <label class="productNameLabel" for="productName">Digite o nome do produto que deseja: </label>
-                <input id="productNameInput" type="text" placeholder="Iphone Pro Max 18" required>
-            </div>
-            <button class="btn-cellPhone">Cell Phone</button>
-            <ul id="list-products"></ul>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="#">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1 class="titleMain">Controle de Estoque</h1>
+        <!--Nome do produto-->
+        <div class="productNameDiv">
+            <label class="productNameLabel" for="productNameInput">Digite o nome do produto que deseja: </label>
+            <input id="productNameInput" name="productNameInput" type="text" placeholder="Iphone Pro Max 18" required>
+        </div>
+        <!--Categoria do produto-->
+        <div class="productCategoryDiv">
+            <label for="productCategoryInput" class="productCategoryLabel">Escolha a categoria que deseja: </label>
+            <select id="productCategoryInput" name="productCategoryInput" required>
+                <option value="" disabled selected>Selecione uma categoria</option>
+                <option value="Celulares">Celulares</option>
+                <option value="Computadores">Computadores</option>
+                <option value="Monitores">Monitores</option>
+            </select>
+        </div>
+        <!--Preço do produto-->
+        <div class="productPriceDiv">
+            <label for="productPriceInput" class="productPriceLabel">Qual o preço do produto R$: </label>
+            <input type="number" id="productPriceInput" name="productPriceInput" placeholder="R$ 150,00" required>
+        </div>
+        <button class="btnAdd">Add Product</button>
+        <ul id="list-products"></ul>
+    </main>
+</body>
+
 </html>

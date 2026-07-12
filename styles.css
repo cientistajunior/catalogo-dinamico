@@ -37,7 +37,9 @@ main {
     gap: 2rem;
 }
 
-.productNameLabel {
+.productNameLabel,
+.productCategoryLabel,
+.productPriceLabel {
     display: block;
     font-size: 1.4rem;
     font-weight: bold;
@@ -45,14 +47,16 @@ main {
     color: var(--graphite-gray);
 }
 
-#productNameInput {
+#productNameInput,
+#productCategoryInput,
+#productPriceInput {
     width: 100%;
     padding: 1.2rem;
     border-radius: .4rem;
     font-size: 1.6rem;
 }
 
-.btn-cellPhone {
+.btnAdd {
     background-color: var(--eucalyptus);
     border: none;
     font-size: 1.6rem;
@@ -63,6 +67,6 @@ main {
     cursor: pointer;
 }
 
-.btn-cellPhone:hover {
+.btnAdd:hover {
     background-color: var(--hover-btn);
 }
