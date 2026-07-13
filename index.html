@@ -22,9 +22,11 @@
             <label for="productCategoryInput" class="productCategoryLabel">Escolha a categoria que deseja: </label>
             <select id="productCategoryInput" name="productCategoryInput" required>
                 <option value="" disabled selected>Selecione uma categoria</option>
-                <option value="Celulares">Celulares</option>
-                <option value="Computadores">Computadores</option>
-                <option value="Monitores">Monitores</option>
+                <option value="celulares">Celulares</option>
+                <option value="computadores">Computadores</option>
+                <option value="monitores">Monitores</option>
+                <option value="teclados">Teclados</option>
+                <option value="tablets">Tablets</option>
             </select>
         </div>
         <!--Preço do produto-->
@@ -33,7 +35,9 @@
             <input type="number" id="productPriceInput" name="productPriceInput" placeholder="R$ 150,00" required>
         </div>
         <button class="btnAdd">Add Product</button>
-        <ul id="list-products"></ul>
+        <ul id="list-products">
+            <li></li>
+        </ul>
     </main>
 </body>
 
