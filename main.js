@@ -66,7 +66,7 @@ const renderProducts = (list) => {
     listProducts.innerHTML = "";
 
     list.forEach((productsList) => {
-        listProducts.innerHTML += `<li>${productsList.name} - R$ ${productsList.price} <button class="btnDelete">Excluir</button></li>`;
+        listProducts.innerHTML += `<li>${productsList.id} - ${productsList.name} - R$ ${productsList.price} <button class="btnDelete" data-id="${productsList.id}">Excluir</button></li>`;
     })
 };
 
@@ -74,6 +74,16 @@ const renderProducts = (list) => {
 renderProducts(products);
 
 listProducts.addEventListener("click", (event) => {
-    // Aqui dentro vamos descobrir exatamente QUAL elemento foi clicado!
-    console.log(event.target);
+    if (event.target.classList.contains("btnDelete")){
+        const idSelected = event.target.dataset.id;
+        const idSelectedConverted = Number(idSelected);
+
+        const indice = products.findIndex(function(obj){
+            return obj.id == idSelectedConverted;
+            
+        });
+
+        products.splice(indice,1);
+        renderProducts(products);
+    }
 });
